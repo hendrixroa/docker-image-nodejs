@@ -7,6 +7,7 @@ RUN apk update && apk upgrade && \
     bash \
     g++ \
     make \
+    curl \ 
     python && \
     rm -rf /var/cache/apk/*
 
