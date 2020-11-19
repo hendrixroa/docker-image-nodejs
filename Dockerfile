@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:15-alpine
 WORKDIR /usr/src/app
 ARG NODE_ENV=production
 
@@ -12,4 +12,4 @@ RUN apk update && apk upgrade && \
     rm -rf /var/cache/apk/*
 
 # Memory limit
-ENV NODE_OPTIONS="--max-old-space-size=4096"
+ENV NODE_OPTIONS="--max-old-space-size=8192"
